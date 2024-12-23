@@ -5,3 +5,5 @@ Usage:
 Place the executable to the root directory of realcugan-ncnn-vulkan. Then run it.
 Copy the file directory and paste to the command prompt, seperate each with enter.
 After inserting all directories, press enter, then follow the hint in your command prompt.
+
+Source: https://github.com/nihui/realcugan-ncnn-vulkan
