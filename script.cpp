@@ -67,12 +67,14 @@ string escape_path(const string& path) {
 #else
     // macOS/Linux 平台：空格用 \ 转义
     string escaped_path;
+    bool last_was_backslash = false;
     for (char c : path) {
-        // 在 macOS/Linux 平台，确保正确转义空格和其他特殊字符
-        if (c == ' ' || c == '~') {
+        // 只有当前一个字符不是反斜杠时，才进行转义
+        if ((c == ' ' || c == '~') && !last_was_backslash) {
             escaped_path += '\\';
         }
         escaped_path += c;
+        last_was_backslash = (c == '\\');
     }
     return escaped_path;
 #endif
@@ -93,7 +95,6 @@ void process_image(const string& executable, const file& image, const int& noise
         command += " -x";
     }
     // 执行命令
-    cout << endl << command << endl;
     int ret = system(command.c_str());
 
     // 检查命令执行结果
