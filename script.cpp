@@ -114,7 +114,6 @@ int main() {
 
     vector<file> input_files;
     cout << "输入待操作的文件名(仅允许png, jpg, webp格式)每行一个. 输入完成后输入E/e结束" << endl;
-    cout << "文件名和目录禁止包含空格" << endl;
     while (true) {
         string input;
         getline(cin, input); // 使用 getline 确保读取完整行
