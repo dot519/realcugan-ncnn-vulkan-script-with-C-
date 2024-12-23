@@ -1,5 +1,5 @@
 # realcugan-ncnn-vulkan-script-with-C++
-This script is for realcugan-ncnn-vulkan, used for image batch processing through realcugan-ncnn-vulkan.
+This script is for realcugan-ncnn-vulkan, avaliable for Windows and macOS, used for image batch processing through realcugan-ncnn-vulkan.
 
 Usage: 
 Place the executable to the root directory of realcugan-ncnn-vulkan. Then run it.
